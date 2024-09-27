@@ -1,0 +1,170 @@
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.contact-heading {
+    background-color: rgba(0, 0, 50, 0.8);
+    margin-top: 30px;
+    color: #e5e5e5;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #ff0081;
+    box-shadow: 0 0 10px rgba(229, 229, 229, 0.5);
+    border: 2px solid #e5e5e5;
+    animation: slideTop 1s ease forwards;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.gradient-color {
+    font-size: 1.8rem;
+    background: linear-gradient(45deg, #ff0081, #800080);
+    background-clip: text;
+    color: transparent;
+    margin-top: 20px;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    height: 50px;
+    width: 100%;
+    padding-left: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #e5e5e5;
+    background-color: rgba(0, 0, 50, 0.8);
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+    animation: slideLeft 0.6s ease forwards;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.input::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(45deg, #ff0081, #800080);
+    z-index: -1;
+    transition: width 0.5s ease; 
+}
+
+.input:hover::before {
+    width: 100% !important;
+}
+
+.email {
+    animation: slideLeft 0.8s ease forwards;
+}
+
+.textarea {
+    height: 200px;
+    width: 100%;
+    padding-top: 15px;
+    animation: slideLeft 1s ease forwards;
+    box-sizing: border-box;
+}
+
+.send-btn {
+    cursor: pointer;
+    background-color: #ff0081;
+    color: #e5e5e5;
+    padding: 10px 40px;
+    margin-top: 50px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    animation: slideBottom 1s ease forwards;
+    transition: 0.2s box-shadow ease;
+}
+
+.send-btn:hover {
+    box-shadow: 0 0 10px #ff0081, 0 0 20px #ff0081, 0 0 30px #e5e5e5 !important;
+}
+
+@keyframes slideTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/********************************** Responsiveness ************************/
+@media screen and (max-width: 768px) {
+    .contact-heading {
+        font-size: 1.5rem; 
+        padding: 15px; 
+    }
+
+    .gradient-color {
+        font-size: 1.3rem; 
+    }
+
+    .input {
+        height: 35px;
+        width: 100%;
+        font-size: 0.9rem; 
+    }
+
+    .textarea {
+        height: 150px; 
+        font-size: 0.9rem; 
+    }
+
+    .send-btn {
+        font-size: 1rem;
+        padding: 10px 30px;
+    }
+}
+
+
+
+/************************** React Toastify Notification ********************/
+.Toastify__toast--success {
+    background-color: #333 !important;
+  }
+  
+.Toastify__toast--error {
+    background-color: #333 !important;
+}

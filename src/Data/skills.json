@@ -1,0 +1,58 @@
+[
+    {
+        "title": "HTML",
+        "imgSrc": "html.png"
+    },
+    {
+        "title": "CSS", 
+        "imgSrc": "css.png"
+    },
+    {
+        "title": "BootStrap", 
+        "imgSrc": "bootstrap.png"
+    },
+    {
+        "title": "JavaScript", 
+        "imgSrc": "javascript.png"
+    },
+    {
+        "title": "React", 
+        "imgSrc": "react.png"
+    },
+    {
+        "title": "Node", 
+        "imgSrc": "node.png"
+    },
+    {
+        "title": "MongoDB", 
+        "imgSrc": "mongodb.png"
+    },
+    {
+        "title": "SQL Sever", 
+        "imgSrc": "sqlserver.png"
+    },
+    {
+        "title": "WordPress", 
+        "imgSrc": "WordPress.png"
+    },
+    {
+        "title": "C#", 
+        "imgSrc": "csharp.png"
+    },
+    {
+        "title": "C++", 
+        "imgSrc": "cplusplus.png"
+    },
+    {
+        "title": "Excel", 
+        "imgSrc": "excel.png"
+    },
+    {
+        "title": "Word", 
+        "imgSrc": "word.png"
+    },
+    {
+        "title": "PowerPoint", 
+        "imgSrc": "powerpoint.png"
+    }
+]

@@ -1,0 +1,184 @@
+
+.home-content {
+    display: flex;
+    margin: 80px 120px;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.image {
+    background-image: url(/src/images/myPic-Purple.jpg);
+    height: 320px;
+    width: 320px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    /* border: 8px solid #e5e5e5; */
+    position: relative;
+}
+
+/* Creating glowing effect around the pic */
+.image::before {
+    content: '';
+    top: -30px;         /* Adjusting Size */
+    bottom: -30px;
+    left: -30px;
+    right: -30px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff0081, #e5e5e5);
+    z-index: -1;        /* Behind the pic */
+    filter: blur(10px);
+    opacity: 0.5;
+    position: absolute;
+}
+
+
+
+
+.p1 {
+    text-shadow: 0 0 10px #ff0081;
+    font-size: 2rem;
+    color: #e5e5e5;
+    font-weight: 700;
+    animation: slideLeft 0.6s ease forwards;
+}
+.p2 {
+    font-size: 2rem;
+    color: #ff0081;
+    font-weight: 700;
+    animation: slideLeft 0.8s ease forwards;
+}
+.p3 {
+    font-size: 1rem;
+    color: #e5e5e5;
+    animation: slideLeft 1s ease forwards;
+}
+
+/* Text Animation keyframe for sliding from left */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+.resume-btn {
+    cursor: pointer;
+    background-color: #ff0081;
+    color: #e5e5e5;
+    padding: 10px 20px;
+    margin-top: 50px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+    animation: slideTop 1s ease forwards;
+    transition: 0.2s;
+}
+
+/* Creating glowing effect around the button */
+/* .resume-btn::before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    position: absolute;
+    background: linear-gradient(45deg, #ff0081, #e5e5e5);
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.resume-btn::before:hover {
+    opacity: 1;   /* This will active the glowing effect on hover 
+} */
+
+.resume-btn:hover {
+    box-shadow: 0 0 10px #ff0081, 0 0 20px #ff0081, 0 0 30px #e5e5e5;
+}
+
+.resume-btn:active {
+    transform: scale(0.98);
+}
+
+/* Text Animation keyframe for sliding from left */
+@keyframes slideTop {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/************************** Media query for smaller screens ***********************/
+@media screen and (max-width: 768px) {
+
+    .home-content {
+        flex-direction: column-reverse;     /* Image will be above intro */
+        align-items: center;
+        margin: 40px 30px;
+    }
+
+    .image {
+        height: 250px;
+        width: 250px;
+    }
+
+    .image::before {
+        top: -20px;   
+        bottom: -20px;
+        left: -20px;
+        right: -20px;
+    }
+    
+    .p1, .p2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .p3 {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .resume-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+        box-shadow: none !important;
+        margin-left: 70px;
+    }
+
+    .resume-btn:hover {
+        box-shadow: 0 0 5px #ff0081, 0 0 10px #ff0081, 0 0 20px #e5e5e5 !important;
+    }
+
+    /* Navbar needs to be above home content */
+    .navbar {
+        position: relative;
+        z-index: 1; 
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+    }
+}
+

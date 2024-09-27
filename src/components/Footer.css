@@ -1,0 +1,153 @@
+
+
+
+.footer-content {
+    background-color: #08182b;
+    color: #e5e5e5;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.3); /* Top shadow */
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    /* max-width: 1200px; */
+}
+
+.section {
+    margin: 0 20px;
+    
+}
+
+.gradient-color {
+    font-size: 1.8rem;
+    background: linear-gradient(45deg, #ff0081, #800080);
+    background-clip: text;
+    color: transparent;
+}
+
+.pages ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pages li {
+    margin: 10px 30px;
+}
+
+.pages a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.pages a:hover {
+    color: #ff0081;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.links a {
+    color: #e5e5e5;
+    margin: 0 15px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.links .fa-icon:hover {
+    transform: scale(1.14);
+}
+
+.links ::before {
+    position: absolute;
+    content: '';
+    background-color: #e5e5e5;
+    width: 2px;
+    top: 20px;
+    bottom: 20px;
+    left: -230px;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #0a141f ;
+    width: 100%;
+    position: relative;
+}
+
+.bottom p {
+    margin: 0;
+    flex-grow: 1; /* Paragraph will take up the available space */
+    text-align: center;
+}
+
+.top-btn {
+    cursor: pointer;
+    background-color: #ff0081;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    right: 40px;
+    position: absolute; 
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pages, .links {
+        margin-bottom: 20px;
+    }
+
+    .pages ul {
+        text-align: center;
+    }
+
+    .links ::before {
+        display: none;
+    }
+
+    .bottom {
+        flex-direction: column; /* Stack items vertically */
+        padding-left: 20px;
+        padding-right: 20px;
+        position: relative;
+    }
+
+    .bottom p {
+        margin: 10px 10px;
+        flex-grow: 0; /* Preventing text from taking up all the space */
+    }
+
+    .top-btn {
+        right: 0; /* Center-align the button */
+        height: 25px;
+        width: 25px;
+        font-size: 1rem;
+        position: relative;
+    }
+}

@@ -1,0 +1,175 @@
+* {
+    color: #e5e5e5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.icon { 
+    font-size: 1.5rem;
+}
+
+.flex-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-content {
+    flex-direction: column;
+    /* margin: 50px; */
+}
+
+.edu-heading {
+    gap: 10px;
+    background-color: rgba(0, 0, 50, 0.8);
+    margin-top: 30px;
+    /* border-radius: 10px; */
+    color: #e5e5e5;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px #ff0081;
+    box-shadow: 0 0 10px rgb(229, 229, 229, 0.5);
+    border: 2px solid #e5e5e5;
+}
+
+.slideTop {
+    animation: slideTop 1s ease forwards;
+}
+
+.edu-sections {
+    flex-direction: column;
+    margin: 5px;
+    position: relative;
+}
+
+.edu-sections::before {
+    content: "";
+    position: absolute;
+    left: 20%; /* Position at the left */
+    top: 50px;
+    height: 96%; /* = total height of the 3 divs */
+    width: 2px;  /* Width of the timeline line */
+    background-color: #e5e5e5;
+}
+
+.container {
+    position: relative; 
+    flex-direction: column;
+    background-color: rgba(0, 0, 50, 0.8);
+    margin-top: 50px;
+    border-radius: 10px;
+    height: 400px;
+    width: 50%;
+    transition: box-shadow 0.3s ease;
+    border: 2px solid #e5e5e5;
+    padding-left: 20px; /* Padding to avoid overlap with the bullet */
+}
+
+.container::before {
+    content: "•";
+    color: #e5e5e5;
+    font-size: 3.5rem;
+    position: absolute;
+    left: -9.5%; /* Adjust to position the bullet on the line */
+    top: 50%; /* Center bullet vertically according to individual containers */
+    transform: translateY(-50%);
+}
+
+.container:hover::before {
+    color: #ff0081;
+}
+
+.slideLeft {
+    animation: slideLeft 1s ease forwards;
+}
+
+
+.heading {
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.info {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+    gap: 10px;
+    
+}
+
+h3 {
+    background-color: rgb(255, 0, 129, 0.5);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+/************************ Animation keyframe for sliding *************************/
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/********************************* Media Queries for small screen *****************************/
+
+@media screen and (max-width : 768px) {
+
+    .icon { 
+        font-size: 1.2rem;
+    }
+
+    /* .education-content {
+        margin: 50px;
+    } */
+
+    .edu-heading {
+        font-size: 1rem;
+    }
+
+    .container {
+        margin-top: 40px;
+        margin-left: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        height: 350px;
+        width: 70%;
+        
+    }
+
+    .edu-sections::before {
+        left: 5%; 
+    }
+
+    .container::before {
+        left: -12%; 
+    }
+    
+    .heading {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    
+}

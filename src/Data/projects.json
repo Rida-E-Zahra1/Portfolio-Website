@@ -1,0 +1,43 @@
+[
+    {
+        "title": "Weather App",
+        "desc": "A dynamic app providing real-time weather updates using React.js and APIs",
+        "imgSrc": "weatherapp.png",
+        "repoLink": "https://github.com/Rida-E-Zahra1/Weather-App"
+    },
+    {
+        "title": "CodeliciousWorld Website",
+        "desc": "A responsive blogging site, built using Bootstrap, for sharing coding resources and tutorials.",
+        "imgSrc": "codeliciousworld.png"
+    },
+    {
+        "title": "Password Generator App",
+        "desc": "A React.js app generating random passwords with customizable criteria.",
+        "imgSrc": "passwordgenerator.png",
+        "repoLink": "https://github.com/Rida-E-Zahra1/Random-Password-Generator-App"
+    },
+    {
+        "title": "Tic Tac Toe Game",
+        "desc": "A classic Tic Tac Toe game with a sleek UI, built using HTML, CSS, and JavaScript.",
+        "imgSrc": "tictac.png",
+        "repoLink": "https://github.com/Rida-E-Zahra1/Tic-Tac-Toe-Game"
+    },
+    {
+        "title": "Rock Paper Scissors Game",
+        "desc": " Play against the computer, which makes random choices, built with HTML, CSS, and JavaScript.",
+        "imgSrc": "rockpaper.png",
+        "repoLink": "https://github.com/Rida-E-Zahra1/Rock-Paper-Scissors-Game"
+    },
+    {
+        "title": "Currency Converter App",
+        "desc": "A dynamic app offering real-time currency conversion with updated exchange rates.",
+        "imgSrc": "currencyconverter.png",
+        "repoLink": "https://github.com/Rida-E-Zahra1/Currency-Converter-App"
+    },
+    {
+        "title": "Amazon Clone",
+        "desc": "A replica of the Amazon website, showcasing product listings and features using HTML and CSS.",
+        "imgSrc": "amazon.png",
+        "repoLink": "https://github.com/Rida-E-Zahra1/Amazon-Homepage-Clone"
+    }
+]

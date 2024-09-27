@@ -1,0 +1,100 @@
+
+.skills-content {
+    flex-direction: column;
+    /* margin: 50px; */
+}
+
+.icon { 
+    font-size: 1.5rem;
+}
+
+.skill-heading {
+    gap: 10px;
+    background-color: rgba(0, 0, 50, 0.8);
+    margin-top: 30px;
+    /* border-radius: 10px; */
+    color: #e5e5e5;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px #ff0081;
+    box-shadow: 0 0 10px rgb(229, 229, 229, 0.5);
+    border: 2px solid #e5e5e5;
+    animation: slideTop 1s ease forwards;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.items-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    flex-wrap: wrap; /* to wrap items in a row */
+}
+
+.item {
+    width: calc(35%); /* to wrap 2 items in a row */
+    margin: 30px;
+    padding: 30px;
+    text-align: center;  /* to center the img + heading */
+    border-radius: 10px;
+    border: 2px solid #e5e5e5;
+    background-color: rgba(0, 0, 50, 0.8);
+    /* box-shadow: 0 0 30px rgb(255, 0, 129, 0.5); */
+    animation: slideBottom 1s ease forwards;
+    transition: transform 1s ease, box-shadow 1s ease;
+}
+
+.item:hover {      
+    border: 2px solid #ff0081;
+    background-image: linear-gradient(45deg, #000a39, #640032);
+    
+}
+
+.item img {
+    height: 150px;
+    width: 150px;
+}
+
+
+/************************ Animation keyframe for sliding *************************/
+@keyframes slideTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/********************************* Media Queries for small screen *****************************/
+
+@media screen and (max-width : 768px) {
+    
+    .skills-content {
+        margin: 0px; 
+    }
+    
+    .items-container {
+        margin: 20px;
+
+    }
+
+    .item {
+        width: calc(65%);
+        margin: 20px;
+    }
+}
